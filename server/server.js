@@ -6,9 +6,10 @@ const bodyParser = require('body-parser');
 const parkRouter = require('./routes/parks.router');
 
 
-// Body parser middleware
+// middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('build'));
 
 // Serve static files
 app.use(express.static('build'));

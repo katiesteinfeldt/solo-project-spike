@@ -5,10 +5,9 @@ const axios = require('axios');
 router.get('/', function (req, res) {
     axios({
         method: 'GET',
-        url: `https://developer.nps.gov/api/v1/parks`,
+        url: `https://developer.nps.gov/api/v1/parks?parkCode=&limit=62&q=National%20Park&fields=images`,
         params: {
             api_key: process.env.NPS_API_KEY,
-            limit: 5,
         }
     }).then((response) => {
         res.send(response.data.data);
@@ -19,3 +18,4 @@ router.get('/', function (req, res) {
 });
 
 module.exports = router;
+

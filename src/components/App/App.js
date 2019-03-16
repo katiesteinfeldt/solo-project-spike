@@ -27,6 +27,9 @@ class App extends Component {
       <div>
         <header className="App-header">
           <h1>Parks!</h1>
+          {this.props.parks.map(park =>
+            <div key={park.fullName}>{park.fullName}</div>
+          )}
         </header>
       </div>
     );
