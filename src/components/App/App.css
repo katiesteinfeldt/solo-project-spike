@@ -31,3 +31,8 @@
     transform: rotate(360deg);
   }
 }
+
+.parksPics {
+  max-height: 200px;
+  max-width: 200px;
+}

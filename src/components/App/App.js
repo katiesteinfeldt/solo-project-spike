@@ -27,10 +27,13 @@ class App extends Component {
       <div>
         <header className="App-header">
           <h1>Parks!</h1>
-          {this.props.parks.map(park =>
-            <div key={park.fullName}>{park.fullName}</div>
-          )}
         </header>
+          {this.props.parks.map(park =>
+            <div key={park.fullName}>{park.fullName}
+            {/* {park.description} */}
+            {/* <img className="parksPics" src={park.images[0].url}></img> */}
+            </div>
+          )}
       </div>
     );
   }
